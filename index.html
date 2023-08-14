@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+
+        <div class="input-section">
+          <input
+            type="text"
+            placeholder="Type a todo . . ."
+            class="yourInput"
+          />
+
+          <button class="btn addBtn">
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+          
+          <button class="deleteAll">Delete All</button>
+        </div>
+      </header>
+
+      <ul class="todos-list">
+        <!-- <li class="todos-item"><P>he</P>
+            <div class="icons">
+              <button class="edit">
+                <span class="material-symbols-outlined">
+                  edit
+                </span>
+              </button>
+              <button class="delete">
+                <span class="material-symbols-outlined">
+                  delete
+                </span>
+              </button>
+                
+            </div>
+        </li> -->
+      </ul>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <input
+          type="text"
+          class="newInput"
+          placeholder="Type your new todo"
+        />
+        <button class="btn saveBtn">
+          <span class="material-symbols-outlined"> save </span>
+        </button>
+        
+      </div>
+    </div>
+  </body>
+</html>
