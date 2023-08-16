@@ -64,7 +64,7 @@ function showTodos() {
 }
 
 // Keypress to addTodo
-window.addEventListener("keypress", (e) => {
+input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     if (input.value === "") {
       alert("Please enter your todo");
@@ -78,21 +78,21 @@ window.addEventListener("keypress", (e) => {
 });
 
 //Delete todo
-//When use remove method to delete todo
-// Array.prototype.remove = function (index) {
-//   if (index >= 0 && index < this.length) {
-//     this.splice(index, 1);
-//   }
-// };
+// When use remove method to delete todo
+Array.prototype.remove = function (index) {
+  if (index >= 0 && index < this.length) {
+    this.splice(index, 1);
+  }
+};
 function deleteTodo(id) {
-  todosArray = todosArray.filter((todo) => todo.id !== id);
-  showTodos();
+  // todosArray = todosArray.filter((todo) => todo.id !== id);
+  // showTodos();
 
-  // const index = todosArray.findIndex((todo) => todo.id === id);
-  // if (index !== -1) {
-  //   todosArray.remove(index);
-  //   showTodos();
-  // }
+  const index = todosArray.findIndex((todo) => todo.id === id);
+  if (index !== -1) {
+    todosArray.remove(index);
+    showTodos();
+  }
 }
 
 //Edit todo
